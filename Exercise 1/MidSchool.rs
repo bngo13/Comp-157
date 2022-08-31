@@ -1,8 +1,21 @@
+use std::time::{Duration, Instant};
+
 fn main() {
-    findPrimeNumbersInRange(100);
+    let val1: usize = 15044550;
+    let val2: usize = 38787;
+
+    let instant = Instant::now();
+
+    let primeNum1 = findPrimeNumbersInRange(val1);
+    let primeNum2 = findPrimeNumbersInRange(val2);
+    let gcd = findGCD(primeNum1, primeNum2);
+
+    let interval = instant.elapsed();
+
+    println!("GCD: {}\nTook: {:?}", gcd, interval);
 }
 
-fn findPrimeNumbersInRange(end: usize) {
+fn findPrimeNumbersInRange(end: usize) -> Vec<usize> {
     let mut possible_primes: Vec<usize> = Vec::new(); // Contains all possible primes
     let mut replacement_indexes: Vec<usize> = Vec::new();
 
@@ -17,8 +30,6 @@ fn findPrimeNumbersInRange(end: usize) {
         if (possible_prime) * (possible_prime) > end || possible_prime == 0 {
             break;
         }
-
-        
 
         for i in 2..end {
             let mut tempnum = possible_prime * i;
@@ -35,7 +46,31 @@ fn findPrimeNumbersInRange(end: usize) {
         std::mem::replace(&mut possible_primes[replace], 0);
     }
 
+    possible_primes.insert(0, 1);
+
+    for test in &mut possible_primes {
+        if *test == 0 {
+            continue;
+        }
+
+        if end % *test != 0 {
+            *test = 0;
+        }
+    }
+
     possible_primes.retain(|x| *x != 0); // Clean 0 out of vector
 
-    println!("{:?}", possible_primes);
+    return possible_primes;
+}
+
+fn findGCD(vec1: Vec<usize>, vec2: Vec<usize>) -> usize {
+    let mut sum = 1;
+    for i in &vec1 {
+        for j in &vec2 {
+            if i == j {
+                sum = sum * i;
+            }
+        }
+    }
+    return sum;
 }
