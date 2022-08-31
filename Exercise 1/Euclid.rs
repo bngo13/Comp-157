@@ -7,8 +7,8 @@
 use std::time::{Duration, Instant};
 
 fn main() {
-    let mut val1: usize = 3465987;
-    let mut val2: usize = 234;
+    let mut val1: usize = 18446744073709551615;
+    let mut val2: usize = 31415926;
 
     let instant = Instant::now();
 
