@@ -2,13 +2,13 @@
 /// 
 /// Euclid Algorithm
 /// 
-///  */
+///
 
 use std::time::{Duration, Instant};
 
 fn main() {
-    let mut val1: usize = 15044550;
-    let mut val2: usize = 38787;
+    let mut val1: usize = 8;
+    let mut val2: usize = 5;
 
     let instant = Instant::now();
 

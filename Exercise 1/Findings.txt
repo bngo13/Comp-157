@@ -1,0 +1,20 @@
+Test 1 - 8 and 5:
+    Euclid: 4.261µs
+    Consecutive integer checking algorithm: 3.283µs
+    Middle School Algorithm: 51.753µs
+
+Test 2 - 15 and 3:
+    Euclid: 2.793µs
+    Consecutive integer checking algorithm: 1.955µs
+    Middle School Algorithm: 20.045µs
+
+Test 3 - 100 and 34
+    Euclid: 1.955µs
+    Consecutive integer checking algorithm: 3.352µs
+    Middle School Algorithm: 76.827µs
+
+Test 4 - 52434 and 868
+    Euclid: 3.283µs
+    Consecutive integer checking algorithm: 25.702µs
+    Middle School Algorithm: 57.368789ms
+

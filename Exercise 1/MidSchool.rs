@@ -1,8 +1,14 @@
+///*
+///
+/// Middle School Method
+///
+///*
+
 use std::time::{Duration, Instant};
 
 fn main() {
-    let val1: usize = 15044550;
-    let val2: usize = 38787;
+    let val1: usize = 8;
+    let val2: usize = 5;
 
     let instant = Instant::now();
 
