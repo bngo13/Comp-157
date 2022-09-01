@@ -1,0 +1,18 @@
+x, y, z, c = 0
+
+c = input
+
+x = c
+
+while x * x > c
+    x = x / 2
+
+y = x * 2
+
+z = (x + y) / 2
+
+while z * z != c
+    if z * z > input
+        y = z
+    else
+        x = z

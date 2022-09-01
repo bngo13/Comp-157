@@ -18,3 +18,9 @@ Test 4 - 52434 and 868
     Consecutive integer checking algorithm: 25.702µs
     Middle School Algorithm: 57.368789ms
 
+Test 5 - 5243544 and 4587
+    Euclid: 1.467µs
+    Consecutive integer checking algorithm: 21.371µs
+    Middle School Algorithm: 4.678751017s
+
+For smaller inputs, the Consecutive Integer Checking Algorithm seems to be the best choice, since the CICA algorithm takes less time. The Middle School Algorithm seems to be inefficient in comparison between Euclid and Consecutive Integer Checking. For larger inputs however, the Euclid algorithm seems to be better and much more efficient compared with the Consecutive Integer Checking algorithm. The middle school algorithm seems to be increasing in time at an exponential rate when applying larger numbers to the input.
