@@ -1,0 +1,19 @@
+inputs: String word1, String word2
+
+word1Array = word1 as character array
+word2Array = word2 as character array
+
+int i = 0;
+
+while True
+    if i > length of word2Array - 1
+        return false
+
+    if word1Array[0] == word2Array[i]
+        remove word1Array[0]
+        remove word2Array[i]
+        i = 0
+    else
+        i = i + 1
+
+return true
