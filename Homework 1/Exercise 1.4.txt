@@ -16,4 +16,7 @@ while True
     else
         i = i + 1
 
+if length of word2Array > 0
+    return false
+
 return true
