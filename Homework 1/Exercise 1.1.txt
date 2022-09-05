@@ -1,7 +1,5 @@
 x, y, z, c = 0
-
 c = input
-
 x = c
 
 while x * x > c
@@ -16,3 +14,5 @@ while z * z != c
         y = z
     else
         x = z
+
+return z

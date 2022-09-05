@@ -1,5 +1,19 @@
 a.
- // Done in other computer REMEMBER TO CHECK !todo()
+    Count[0] = 3 0 0 0 | 3
+    Count[1] = 0 1 0 0 | 1
+    Count[2] = 1 1 2 0 | 4
+    Count[3] = 1 1 1 2 | 5
+    Count[4] = 0 0 0 0 | 0
+    Count[5] = 0 1 0 1 | 2
+
+    S[0] = A[4] = 14
+    S[1] = A[1] = 35
+    S[2] = A[5] = 47
+    S[3] = A[0] = 60
+    S[4] = A[2] = 81
+    S[5] = A[3] = 98
+
+    S = {14, 35, 47, 60, 81, 98}
 b.
     Using array: 32 12 45 12(2)
 
