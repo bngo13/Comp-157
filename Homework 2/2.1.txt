@@ -1,0 +1,4 @@
+4a.
+    Best Case: Choosing 2 gloves resulting in a matching pair
+    Worst Case: Choosing 19 gloves resulting in a matching pair
+
