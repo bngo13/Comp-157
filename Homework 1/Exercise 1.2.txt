@@ -1,4 +1,5 @@
 dmin = inf
+
 // Would be better with Counting sort but can't be sure if all numbers are positive
 sort list A using Bucket Sort
 
