@@ -67,17 +67,69 @@
         n/(n+1)
 2.
     a.
-        i^4 + 2i^2 + 1 = (n-1)^4 + 2(n-1)^2 + 1
-        O(n^4)
+        n
+        E i^4 + 2i^2 + 1
+        i=1
+        n       n        n
+        E i^4 + E 2i^2 + E 1
+        i=1     i=1      i=1
+        n(n+1)(2n+1)(3n^2+3n-1)/30 + 2(n(n+1)(2n+1)/6) + n
+        6n^5+15n^4+10n^3-n + (2n^3+3n^2+n)/3 + n
+        O(n^5)+O(n^4)+O(n^3)-O(n)+O(n^3)+O(n^2)+O(n)+O(n)
+        drop lower O
+        O(n^5)
     b.
-        lg i^2 = 2 log i = 2 log (n-1)
-        O(log(n^2))
+        n
+        E lg i^2
+        i=3
+
+        n          1
+        E lg i^2 - E lg i^2
+        i=1        i=1
+
+        n           1
+        S lg(i^2) - S lg i^2
+        1           1
+
+        2x(ln(x)-1)/ln(10) - 0
+        Simply:
+        O(x(ln(x)))
     c.
-        (n + 1)2^(n-1)
-        O(n * 2^n)
+        n
+        E i2^(i-1) + 2^(i-1)
+        i=1
+
+        n            n
+        E i2^(i-1) + E 2^(i-1)
+        i=1          i=1
+
+        n            n
+        S i2^(i-1) + S 2^(i-1)
+        1            1
+
+        (ln(2)n-1)*2^(n-1) / ln^2 (2) + 2^(n-1)/ln(2)
+
+        O(n2^n) + O(2^n)
+
+        Simplify:
+        O(n2^n)
     d.
-        Sum n-1 starting 0 = (i + i - 1) = (2i - 1) = (2(n-1) - 1) = (2n - 2 - 1) = (2n - 3)
-        O(n)
+        n   i
+        E i E j
+        i=1 j=1
+
+        n
+        E (i^3+i^2)/2
+        i=1
+
+            n           n
+        1/2 E i^3 + 1/2 E i^2
+            i=1         i
+
+        n^2(n + 1)^2/4 + n(n+1)(2n+1)/12
+        O(n^4) + O(n^3)
+        Simplify:
+        O(n^4)
 5.
     a.
         it computes the distance between the biggest and smallest numbers in an array
@@ -86,7 +138,7 @@
     c.
         this basic operation is being executed (n-2) times twice because of the two comparisons, making it 2(n-2) times (n-2 because the i starts at 1 and not 0)
     d.
-        it's efficiency class is O(n^2) because it has to reloop through the array n-1 amount of times, making it n*n = n^2
+        it's efficiency class is O(n) because it has to reloop through the array once.
     e.
         sorting the array would be the best course of action here. There are sorting algorithms such as the block sort that would be stable and in-place while giving an efficiency of nlogn in worst case and n in best case. After doing this, a simple calculation of a[n-1] - a[0] is needed to calculate the difference, essentially making the efficiency class go from an O(n^2) to a O(nlogn)
 
