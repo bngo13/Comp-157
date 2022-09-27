@@ -4,48 +4,48 @@
 	2 5 2
 3.3.4.6
 	Partition (arr[n], start=0) 
-	half = sum(originalarr) / 2
-	if half is not even {
-		return false
-	}
-	arr1 = clone of arr
-	arr2 = []
-	count = 1
-	while count != n {
-		for i = 0; i < n; i++ {
-			counter = arr[i]
-			move arr[i] into arr2
-			if counter == half {
-				return arr1 and arr2
-			}
-			for j = 0; j < n; j++ {
-				if j == i {
-					continue
-				}
-				if j + count > n {
-					break
-				}
-				for x = 0; x < count; x++ {
-					counter = counter + arr[j+x]
-					move arr[j+x] into arr2
-				}
+		half = sum(originalarr) / 2
+		if half is not even {
+			return false
+		}
+		arr1 = clone of arr
+		arr2 = []
+		count = 1
+		while count != n {
+			for i = 0; i < n; i++ {
+				counter = arr[i]
+				move arr[i] into arr2
 				if counter == half {
 					return arr1 and arr2
 				}
-				counter = arr[i]
-				
-				// Reset arr2 and arr1
+				for j = 0; j < n; j++ {
+					if j == i {
+						continue
+					}
+					if j + count > n {
+						break
+					}
+					for x = 0; x < count; x++ {
+						counter = counter + arr[j+x]
+						move arr[j+x] into arr2
+					}
+					if counter == half {
+						return arr1 and arr2
+					}
+					counter = arr[i]
+
+					// Reset arr2 and arr1
+					clear arr2
+					clone arr into arr1
+					// Set arr2 back to what it was before the loop
+					move arr[i] into arr2
+				}
+				// Reset arr1 and arr2
 				clear arr2
 				clone arr into arr1
-				// Set arr2 back to what it was before the loop
-				move arr[i] into arr2
 			}
-			// Reset arr1 and arr2
-			clear arr2
-			clone arr into arr1
-		}	
-		count++
-	}
+			count++
+		}
 3.3.4.9
 	a
 		magic square consists of n rows and each row adding up to a certain number. lets call this number s
@@ -60,11 +60,20 @@
 		proof done
 	b
 		1. create a list from 1 to n^2
-		2. generate all permutations of the list from step 1 and set the starter permutation as the first permutation
-		3. find the sum of the magic square by using: n(n^2+1)/2
-		4. generate a magic square by filling in the square from left to right, top to bottom using the next permutation
-		5. sum the diagonals, rows, and columns and compare with step 3.
-		6. if the comparison from step 5 is true, the square generated from step 4 is a valid permutation
-		7. jump to step 4
+		2. create new list, permutations
+		2. left = 0, right = 0
+		3. permute list from 1 with left and right
+		4. if left equals right, push current list into permutations
+		5. else: for(i = left; i <= right; i++) {
+					swap(list[left], list[i])
+					jump to step 3 with left+1
+					swap(list[left], list[i])
+				}
+		6. find the sum of the magic square by using: n(n^2+1)/2
+		7. generate a magic square by filling in the square from left to right, top to bottom using the next item in permutations
+		8. sum the diagonals, rows, and columns and compare with step 3.
+		9. if the comparison from step 5 is true, the square generated from step 4 is a valid permutation
+		10. jump to step 4
 	c
+		better algorithm: https://www.youtube.com/watch?v=Qf4NyHiy0W8
 	d	
