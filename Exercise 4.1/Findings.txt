@@ -1,0 +1,26 @@
+10^2:
+    Bubble: 20028ns
+    Insert: 5945ns
+    Selection: 9064ns
+    Shell: 4897ns
+10^3:
+    Bubble: 1516441ns
+    Insert: 430165ns
+    Selection: 538269ns
+    Shell: 74739ns
+10^4:
+    Bubble: 187ms
+    Insert: 44ms
+    Selection: 52ms
+    Shell: 1ms
+10^5:
+    Bubble: 21852ms
+    Insert: 3632ms
+    Selection: 4989ms
+    Shell: 18ms
+10^6:
+    Bubble: >3m
+    Insert: >3m
+    Selection: >3m
+    Shell: 249ms
+
