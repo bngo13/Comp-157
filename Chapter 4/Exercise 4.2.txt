@@ -1,0 +1,4 @@
+1.
+    a. split array size n into 3 subarrays
+    b. add all the numbers in array 1 and 2 and compare
+    c. if
