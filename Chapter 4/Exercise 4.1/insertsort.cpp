@@ -32,14 +32,26 @@ void generateArr(int arr[], int size) {
     }
 }
 
+void generateIncArr(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        arr[i] = i;
+    }
+}
+
+void generateIncDec(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        arr[i] = size - i;
+    }
+}
+
 int main() {
 
     srand(0);
 
-    int size = 10000;
+    int size = 1000000;
     int* arr = new int[size];
 
-    generateArr(arr, size);
+    generateIncDec(arr, size);
 
     auto start = chrono::high_resolution_clock::now();
     insertSort(arr, size);
