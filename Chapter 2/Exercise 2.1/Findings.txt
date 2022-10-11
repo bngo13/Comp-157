@@ -1,0 +1,30 @@
+Selection:
+    Array Size 10:
+        4.553794860839844 * 10 ^-5
+    Array Size 100:
+        0.0026674270629882812
+    Array Size 1000:
+        0.13776302337646484
+    Array Size 5000:
+        2.9635281562805176
+    Array Size 7000:
+        6.163516044616699
+    Array Size 10000:
+        14.918177127838135
+    Line of Best Fit: y=1.87*10^-7(n-1081.76)^2 - 0.0938 = O(n^2)
+Bubble:
+    Array Size 10:
+        2.6464462280273438 * 10 ^-5
+    Array Size 100:
+        0.001968860626220703
+    Array Size 1000:
+        0.1193549633026123
+    Array Size 5000:
+        2.643812417984009
+    Array Size 7000:
+        5.331615447998047
+    Array Size 10000:
+        15.88853669166565
+    Line of Best Fit: y=2.328 * 10 ^ -7(n-1695)^2 - .042 = O(n^2)
+
+Based on the timing between the selection and bubble sorting algorithms are roughly the same efficiency, since the array sizes both increase at around the same rate. For example, from 7k to 10k, the increase is around a 10 second increase for both algorithms. For an array size of 100, both are in the thousandths.
