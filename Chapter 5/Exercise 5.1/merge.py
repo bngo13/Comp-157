@@ -10,32 +10,36 @@ def mergesort(a):
         mergesort(b)
         mergesort(c)
         merge(b,c,a)
+        print()
 
-    print(b)
-    print(c)
-
-def merge(b, c, a):
+def merge(arrb, arrc, arr):
+    p = len(arrb)
+    q = len(arrc)
     i = 0
     j = 0
     k = 0
-    while i < len(b) and j < len(c):
-        if b[i] <= c[j]:
-            a[k] = b[i];
-            i = i + 1
-        else:
-            a[k] = c[j];
-            j = j + 1
-        k = k + 1
-    if j == len(b):
-        while j < len(c):
-            a[k] = c[j]
-            j += 1
-            k += 1
-    else:
-        while i < len(b):
-            a[k] = b[i]
+    print(arrb)
+    print(arrc)
+    while i < p and j < q:
+        if arrb[i] <= arrc[j]:
+            arr[k] = arrb[i]
             i += 1
-            k += 1
+        else:
+            arr[k] = arrc[j]
+            j += 1
+        k += 1
+    if i == p:
+        d = 0
+        for i in range(j, q):
+            arr[k + d] = arrc[i]
+            d += 1
+    else:
+        d = 0
+        for i in range(i, p):
+            arr[k + d] = arrb[i]
+            d += 1
+
+
 
 a = ["E", "X", "A", "M", "P", "L", "E"]
 
