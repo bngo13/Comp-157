@@ -1,0 +1,16 @@
+# PROCESS:
+#   Create a tree with all win arrows pointing to teams
+#   Traverse this tree
+1. arr = all teams scores
+2. for each team in arr, draw a point and draw the respective arrow for wins from or to the point
+3. printarr = []
+4. get a point without any incoming arrows and put that value into printarr
+5. i = 0
+6. get all children of printarr[i] and put those that are not already in printarr
+7. if there are no children at printarr[i] jump to step 10
+8. i = i + 1
+9. repeat 6
+10. print out every value in printarr in order
+
+Complexity:
+The complexity of this function, given that the actual tree was already created, will be in the order of O(n). The reason is because every time the function actually does a BFS, it has to continue to loop to the next element of the array, meaning that it actually has to traverse through an entire array of n size. That leads to the efficiency class of O(n)
