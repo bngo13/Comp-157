@@ -32,3 +32,13 @@
     3
     3 4
     4
+7.
+    generateBS(arr, index)
+        if index == length of arr
+            printString(arr)
+
+        arr[index] = 0
+        generateBS(arr, index + 1)
+
+        arr[index] = 1
+        generateBS(arr, index + 1)
