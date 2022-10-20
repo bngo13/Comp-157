@@ -1,0 +1,7 @@
+5
+    a
+        a, b, d, e, c, f
+    b.
+        d, b, e, a, c, f
+    c.
+        d, e, b, f, c, a
