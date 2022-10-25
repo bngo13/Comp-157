@@ -1,0 +1,44 @@
+2.
+    a.
+        Input: Arr(n)
+        Output: 2 numbers
+
+        merge(arr, left, right):
+            if left > right
+                return
+            mid = half of left + right
+            merge(arr, left, mid)
+            merge(arr, mid+1, right)
+            combine(arr, left, mid, right)
+
+        merge(array, 0, len(Arr))
+        return arr[0] and arr[len(arr)]
+    b.
+        C(n) = C(n/2) + 1
+        C(1) = 1
+        n = 2^k
+        1 = 2^k
+        1 = 2^0
+        C(2^0) = 1
+
+        C(2^k) = C(2^(k-1)) + 1
+
+        C(2^(k-1)) = C(2^(k-2)) + 1
+        C(2^k) - 1 = C(2^(k-2)) + 1
+        C(2^k) = C(2^(k-2)) + 2
+
+        C(2^(k-2)) = C(2^(k-3)) + 2
+        C(2^k) - 1 = C(2^(k-3)) + 2
+        C(2^k) = C(2^(k-3)) + 3
+
+        C(2^k) = C(2^(k-i)) + i
+        k-i = 0
+        k = i
+
+        C(2^k) = C(2^(k-k)) + k
+        C(2^k) = 1 + k
+        k = log_2(n)
+        C(n) = 1 + log_2(n)
+        C(n) Ɛ Θ(log(n))
+    c.
+        This is much more efficient, being on the order of log(n) instead of just n or even n^2. The brute force method of finding the largest and smallest number would be 2n since you would have one loop that loops to find the smallest numbers and another to find the largest number. This method cuts that time by a lot, leading to the actual efficiency to be log(n) instead of n
