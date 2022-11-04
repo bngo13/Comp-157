@@ -1,0 +1,4 @@
+5
+    a
+    b
+        True, since everytime the avl tree has to pivot, the largest and smallest number will get rearranged to either the lowest or second lowest value
