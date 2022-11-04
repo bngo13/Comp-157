@@ -1,0 +1,94 @@
+Testing between: Bubble, Insert, Selection, Shell, and Heap
+Random:
+    10^2:
+        Bubble: 20028ns
+        Insert: 5945ns
+        Selection: 9064ns
+        Shell: 4897ns
+        Heap: 64116ns
+    10^3:
+        Bubble: 1516441ns
+        Insert: 430165ns
+        Selection: 538269ns
+        Shell: 74739ns
+        Heap: 872538ns
+    10^4:
+        Bubble: 187ms
+        Insert: 44ms
+        Selection: 52ms
+        Shell: 1ms
+        Heap: 9ms
+    10^5:
+        Bubble: 21852ms
+        Insert: 3632ms
+        Selection: 4989ms
+        Shell: 18ms
+        Heap: 22ms
+    10^6:
+        Bubble: >3m
+        Insert: >3m
+        Selection: >3m
+        Shell: 249ms
+        Heap: 278ms
+Increasing:
+    10^2:
+        Bubble took: 1373ns
+        Insert took: 1664ns
+        Selection took: 69413ns
+        Shell took: 8517ns
+        Heap took: 35961ns
+    10^3:
+        Bubble took: 6663ns
+        Insert took: 38464ns
+        Selection took: 2626547ns
+        Shell took: 97337ns
+        Heap took: 531897ns
+    10^4:
+        Bubble took: 41149ns
+        Insert took: 73341ns
+        Selection took: 106902533ns
+        Shell took: 531640ns
+        Heap took: 6ms
+    10^5:
+        Bubble took: 1458794ns
+        Insert took: 3903664ns
+        Selection took: 6221ms
+        Shell took: 15ms
+        Heap took: 23ms
+    10^6:
+        Bubble took: 6ms
+        Insert took: 11ms
+        Selection: >5m
+        Shell: 150ms
+        Heap took: 212ms
+Decreasing:
+    10^2:
+        Bubble took: 24897ns
+        Insert took: 10129ns
+        Selection took: 8917ns
+        Shell took: 2896ns
+        Heap took: 7059ns
+    10^3:
+        Bubble took: 2338026ns
+        Insert took: 882673ns
+        Selection took: 714787ns
+        Shell took: 35788ns
+        Heap took: 115034ns
+    10^4:
+        Bubble took: 233176277ns
+        Insert took: 88108373ns
+        Selection took: 123263773ns
+        Shell took: 495155ns
+        Heap took: 7ms
+    10^5:
+        Bubble took: 33936ms
+        Insert took: 7623ms
+        Selection took: 8714ms
+        Shell took: 13ms
+        Heap took: 20ms
+    10^6:
+        Bubble: >15m
+        Insert: >15m
+        Selection: >15m
+        Shell: 295ms
+        Heap took: 195ms
