@@ -1,4 +1,13 @@
 5
     a
+        1. start at the root node
+        2. go to the left node if there is a node there
+        3. repeat step 2
+        4. smallest = the current node
+        5. go back to the root node
+        6. go to the right node if there is a node there
+        7. repeat step 6
+        8. largest = the current node
+        9. return valueOf(largest) - valueOf(smallest)
     b
         True, since everytime the avl tree has to pivot, the largest and smallest number will get rearranged to either the lowest or second lowest value
