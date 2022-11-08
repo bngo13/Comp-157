@@ -5,5 +5,7 @@
         a c
 
         d a b e g f c
+	
+	Correct: d a c b g  f e
     b
         a b c d g e loops, dfs cannot be applied
