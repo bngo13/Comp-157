@@ -1,0 +1,14 @@
+10.
+    This problem can be solved by recursively reducing the problem size into a size we can actually solve for. Each recursion will have to be equal.
+
+    In this case, I will be reducing the problem by ⌊n/2⌋ + 1 until we hit a case where n is 3
+
+    When solving for this square, we find the most effective area to be in the middle. Specifically, the point is (2,2). We can use the equation (⌊n/2⌋ + 1, ⌊n/2⌋ + 1) to represent this point.
+
+    To test this case, we can move onto a bigger square where n = 5
+    Using the given equation above, we find the most efficient placement would be dead center at (3, 3). By checking the other points, we find that the this is correct and the middle is the most efficient placement for the post office
+
+    For the final test, we will test the square in which n = 4.
+    Using the equation, the most efficient equation is (3, 3). When checking with all the other points, this does prove to be the most efficient, but there are also 3 other points that can be used.
+
+    Since the above equation is valid, the equation (⌊n/2⌋ + 1, ⌊n/2⌋ + 1) must be valid for all other cases since we have recursively reduced the problem into effectively the same problem, just with a smaller size
