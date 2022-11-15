@@ -1,6 +1,6 @@
 3
     a
-        h = heap
+        h = elements in heap
         Minimum (1 on the bottom row): 2^h
 
         Maximum (last level is completely full): 2^(h+1) - 1
