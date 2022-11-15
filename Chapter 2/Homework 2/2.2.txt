@@ -79,6 +79,6 @@
         Since greater than 0, log_2(n) Ɛ Θ(lg(n))
 9
     a
-        O(nlog(n)) + O(n) = drop the lower O() = O(n)
+        O(nlog(n)) + O(n) = drop the lower O() = O(nlog(n))
     b
         O(2n) = 2*O(n) = drop the constant O(n)
