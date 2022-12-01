@@ -1,0 +1,22 @@
+let n = the number we want to count up to
+let d[] = the coins we are using
+let c[p] = the lowest number of coins for p coins
+
+c[0] = 0
+
+for i in c[1 to p]
+    let f[] = all possible combinations for current cell (int)
+    loop through d with j {
+        if i < j
+            get out of loop
+
+        if c[i - d] != null
+            f.push(c[i - d] + 1)
+    }
+
+    if f[] is empty
+        c[i] = null
+        continue
+
+    c[i] = min(f)
+
