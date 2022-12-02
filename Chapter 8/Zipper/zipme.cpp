@@ -20,25 +20,53 @@ bool zipper() {
     int length = testWord.length();
     vector<char> *vectorPointer;
     for (int i = 0; i < length; i++) {
-        if (testWord[0] == firstWord[0] && testWord[0] == secondWord[0]) {
-            thirdWord.push_back(testWord[0]);
+        char currentLetter = testWord[0];
 
-            firstWord.erase(firstWord.begin());
-            secondWord.erase(secondWord.begin());
-        } else if (isWordEqual(firstWord)) {
-            vectorPointer = &firstWord;
-        } else if (isWordEqual(secondWord)) {
-            vectorPointer = &secondWord;
-        } else if (isWordEqual(thirdWord)) {
-            vectorPointer = &thirdWord;
-        } else {
-            return false;
+        // Test currenLetter against thirdWord's first letter if not empty
+        if (!thirdWord.empty() && thirdWord.at(0) == currentLetter) {
+            thirdWord.erase(thirdWord.begin());
+            testWord.erase(testWord.begin());
+            continue;
         }
 
-        (*vectorPointer).erase((*vectorPointer).begin());
-        testWord.erase(0, sizeof(testWord[0]));
+        // Test currentLetter against both firstWord and secondWord for duplicates
+        if (!firstWord.empty() && !secondWord.empty() && firstWord.at(0) == currentLetter && secondWord.at(0) == currentLetter) {
+            // Append currentLetter to the end of the array
+            thirdWord.push_back(currentLetter);
+
+            // Remove all occurances of the current letter
+            firstWord.erase(firstWord.begin());
+            secondWord.erase(secondWord.begin());
+            testWord.erase(testWord.begin());
+            continue;
+        }
+
+        // Test currentLetter against firstWord's first letter if not empty
+        if (!firstWord.empty() && firstWord.at(0) == currentLetter) {
+            firstWord.erase(firstWord.begin());
+            testWord.erase(testWord.begin());
+            continue;
+        }
+
+        // Test currentLetter against secondWord's first letter if not empty
+        if (!secondWord.empty() && secondWord.at(0) == currentLetter) {
+            secondWord.erase(secondWord.begin());
+            testWord.erase(testWord.begin());
+            continue;
+        }
+
+        // If all above is false, break out
+        break;
     }
-    return true;
+
+    /*  Yes state is when:
+            testWord's size is 0
+            all word are completely empty (to avoid too many or little words)
+     */
+    if (testWord.empty() && firstWord.empty() && secondWord.empty() && thirdWord.empty()) {
+        return true;
+    }
+    return false;
 }
 
 void loadInput(string word, vector<char> *vector) {
