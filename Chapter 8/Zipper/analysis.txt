@@ -1,0 +1,18 @@
+Time Analysis:
+    There's a for loop looping over word3.
+    In each loop, there are 4 comparisons that happen until either the first or second word is finished checking.
+        1 for tempWord[0]
+        1 for firstWord[0] == secondWord[0] == word3[0]
+        1 for firstWord[0] == word2[0]
+        1 for secondWord[0] == word2[0]
+
+    word3 = y
+    min(len(word1), len(word2)) = z
+    O(y * z)
+    =
+    O(len(word3) * min(len(word1), len(word2)))
+
+Space Analysis:
+    In the worst case, one word will be all duplicates of another word. For example app and sapp. In this case, the third array will have the maximum length of the lowest.
+
+    O(min(len(word1), len(word2)))
